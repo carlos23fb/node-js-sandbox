@@ -1,0 +1,23 @@
+{
+  "name": "fundaments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos23fb/node-js-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlos23fb/node-js-sandbox/issues"
+  },
+  "homepage": "https://github.com/carlos23fb/node-js-sandbox#readme",
+  "dependencies": {
+    "cowsay": "^1.5.0"
+  }
+}
