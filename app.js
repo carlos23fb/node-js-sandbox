@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views')
 
 app.get('/', (req, res) => {
-    res.render('index', { titulo: "mi titulo" })
+    res.render('index', { titulo: "Curso de Desarrollo con Node JS" })
 });
 
 app.get('/about', (req, res) => {
