@@ -14,7 +14,7 @@ const uri = `mongodb+srv://${user}:${password}@cluster0.ql4mt.mongodb.net/${dbna
 
 // 
 mongoose.connect(uri, {
-    userNewUrlParser: true,
+    useNewUrlParser: true,
     useUnifiedTopology: true
 })
     .then(() => console.log('Data Base conected'))
