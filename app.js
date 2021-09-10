@@ -20,9 +20,9 @@ mongoose.connect(uri, {
     useUnifiedTopology: true
 })
     .then(() => console.log('Data Base conected'))
-    .catch(() => console.log('Erro conecting data base'))
+    .catch(() => console.log("Error Can't connect to the database "))
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');s
 app.set('views', __dirname + '/views')
 
 
@@ -36,6 +36,8 @@ app.use((req, res, next) => {
 })
 
 app.listen(port, () => {
-    console.log(`Escuchando desde el puerto ${port}`);
+    console.log(`Escuchando desde el puerto ${process.env.DBNAME}`);
+    console.log(`Escuchando desde el puerto ${process.env.USER_NAME}`);
+    console.log(`Escuchando desde el puerto ${process.env.PASSWORD}`);
     
 })
