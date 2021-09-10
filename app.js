@@ -22,7 +22,7 @@ mongoose.connect(uri, {
     .then(() => console.log('Data Base conected'))
     .catch(() => console.log("Error Can't connect to the database "))
 
-app.set('view engine', 'ejs');s
+app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views')
 
 
