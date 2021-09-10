@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+require('dotenv').config()
+
 const port = process.env.PORT || 3000;
 
 // Data Base connection
@@ -10,7 +12,7 @@ const mongoose = require('mongoose');
 const user = 'course_node';
 const password = 'kCbZSXAmequYMwdn';
 const dbname = 'petshop'
-const uri = `mongodb+srv://${user}:${password}@cluster0.ql4mt.mongodb.net/${dbname}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.ql4mt.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 
 // 
 mongoose.connect(uri, {
@@ -35,4 +37,5 @@ app.use((req, res, next) => {
 
 app.listen(port, () => {
     console.log(`Escuchando desde el puerto ${port}`);
+    
 })
