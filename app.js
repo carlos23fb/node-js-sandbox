@@ -36,8 +36,5 @@ app.use((req, res, next) => {
 })
 
 app.listen(port, () => {
-    console.log(`Escuchando desde el puerto ${process.env.DBNAME}`);
-    console.log(`Escuchando desde el puerto ${process.env.USER_NAME}`);
-    console.log(`Escuchando desde el puerto ${process.env.PASSWORD}`);
-    
+    console.log(`Escuchando desde el puerto ${process.env.PORT}`);  
 })
