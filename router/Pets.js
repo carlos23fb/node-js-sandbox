@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     try {
 
         const arrayPetsDB = await Pet.find()
-        console.log(arrayPetsDB);
+        
         res.render("pets", {
             arrayPets: arrayPetsDB
             // [

@@ -11,18 +11,20 @@
                 </tr>
             </thead>
             <tbody>
-                <%= arrayPets[0] %> 
 
                 <% if (arrayPets.length > 0) { %>
-                    <% arrayPets.forEach(pet=> { %>
+                    
+                    <% for( let index = 0; index < arrayPets.length; index++ ) { %>
                         <tr>
-                            <th scope=""><%= pet._id %></th>
-                            <td><%= pet.nombre %> </td>
-                            <td><%= pet.descripcion %> </td>
-                            <td><%= pet.emoji %> </td>
+                            <th scope="row"><%= arrayPets[index]._id %></th>
+                            <td><%= arrayPets[index].nombre %> </td>
+                            <td><%= arrayPets[index].descripcion %> </td>
+                            <td><%= arrayPets[index].emoji %> </td>
                             <td></td>
                         </tr>
-                    <% }) %>
+                    <% } %>
+                    
+
                 <% } %>
             </tbody>
         </table>
