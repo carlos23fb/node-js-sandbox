@@ -1,8 +1,14 @@
 const express = require('express');
+const bodyParser = require('body-parser')
 const app = express();
+
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 require('dotenv').config()
 
+
+// Set Port 
 const port = process.env.PORT || 3000;
 
 // Data Base connection
@@ -17,7 +23,7 @@ mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-    .then(() => console.log('Data Base conected'))
+    .then(() => console.log('Data Base connected'))
     .catch(() => console.log("Error Can't connect to the database "))
 
 app.set('view engine', 'ejs');
