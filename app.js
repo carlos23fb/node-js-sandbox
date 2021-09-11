@@ -9,9 +9,7 @@ const port = process.env.PORT || 3000;
 
 const mongoose = require('mongoose');
 
-const user = 'course_node';
-const password = 'kCbZSXAmequYMwdn';
-const dbname = 'petshop'
+
 const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.ql4mt.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 
 // 
@@ -36,5 +34,5 @@ app.use((req, res, next) => {
 })
 
 app.listen(port, () => {
-    console.log(`Escuchando desde el puerto ${process.env.PORT}`);  
+    console.log(`Escuchando desde el puerto ${process.env.PORT}`);
 })
