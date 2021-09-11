@@ -1,4 +1,4 @@
-<%- include("template/header", {titulo_web: `Pet Details: ${petObject.nombre}` }) %>
+<%- include("template/header", {titulo_web: `Pet Details: ${!error ? petObject.nombre : 'error'}` }) %>
 <div class="container">
 
     <% if (!error) { %>

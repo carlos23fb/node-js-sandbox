@@ -41,6 +41,7 @@ router.get('/:id', async (req, res) => {
     } catch (error) {
         console.log('error', error);
         res.render('details', {
+            petObject:{nombre:'error'},
             error: true,
             messaje : "pet doesn't exist"
         })
