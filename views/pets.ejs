@@ -1,5 +1,7 @@
 <%- include("template/header", {titulo_web: "Pets" }) %>
     <div class="container">
+        <h1 class="my-2">CRUD Mongo</h1>
+        <a href="pets/create" class="btn btn-success btn-block my-4">Add new Pet</a>
         <table class="table">
             <thead>
                 <tr>
@@ -20,7 +22,10 @@
                             <td><%= arrayPets[index].nombre %> </td>
                             <td><%= arrayPets[index].descripcion %> </td>
                             <td><%= arrayPets[index].emoji %> </td>
-                            <td></td>
+                            <td>
+                                <a href="pets/<%= arrayPets[index]._id %>" class="btn btn-info">Details</a>
+                                <a href="#" class="btn btn-warning">Edit</a>
+                            </td>
                         </tr>
                     <% } %>
                     

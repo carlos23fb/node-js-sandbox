@@ -1,0 +1,19 @@
+<%- include("template/header", {titulo_web: `Pet Details: ${petObject.nombre}` }) %>
+<div class="container">
+
+    <% if (!error) { %>
+    <h1 class="py-2">Detalles</h1>
+    <h2 class="py-3">Nombre: <%= petObject.nombre %>
+    </h2>
+    <h3 class="py-3">Descripcion: <%= petObject.descripcion %>
+    </h3>
+    <h3 class="py-3">emoji: <%= petObject.emoji %>
+    </h3>
+    
+    <% } else {%> 
+        <h3 class="py-3">Error: <%= messaje %>
+        </h3>
+    <%  }%>
+    <a href="/pets" class="btn btn-success btn-block">Back</a>
+</div>
+<%- include("template/footer")%>
