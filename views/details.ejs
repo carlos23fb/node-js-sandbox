@@ -1,19 +1,25 @@
-<%- include("template/header", {titulo_web: `Pet Details: ${!error ? petObject.nombre : 'error'}` }) %>
+<%- include("template/header", {titulo_web: `Pet Details` }) %>
 <div class="container">
-
+    
     <% if (!error) { %>
     <h1 class="py-2">Detalles</h1>
+    <h2 class="py-3">Id: <%= petObject.id %>
     <h2 class="py-3">Nombre: <%= petObject.nombre %>
     </h2>
     <h3 class="py-3">Descripcion: <%= petObject.descripcion %>
     </h3>
     <h3 class="py-3">emoji: <%= petObject.emoji %>
     </h3>
-    
+    <button class="btn btn-danger mb-3" id="btn-delete" data-id="<%= petObject._id %> ">Delete Pet</button>
+    <br>
     <% } else {%> 
         <h3 class="py-3">Error: <%= messaje %>
         </h3>
     <%  }%>
+    
+    
     <a href="/pets" class="btn btn-success btn-block">Back</a>
 </div>
 <%- include("template/footer")%>
+
+<script src="/js/script_delete.js"></script>
