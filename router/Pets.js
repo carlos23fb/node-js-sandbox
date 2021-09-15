@@ -53,17 +53,7 @@ router.delete('/:id', async (req, res) => {
 
     try {
         const petDB = await Pet.findByIdAndDelete({_id: id})
-        if (petDB) {
-            res.json({
-                status: true,
-                messaje: 'Pet Has been deleted'
-            })
-        } else {
-            res.json({
-                status: false,
-                messaje: 'Error Pet has been not deleted'
-            })
-        }
+        
     } catch (error) {
         console.log('error', error)
     }
