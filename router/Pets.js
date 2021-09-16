@@ -41,35 +41,12 @@ router.get('/:id', async (req, res) => {
     } catch (error) {
         console.log('error', error);
         res.render('details', {
-            petObject: {nombre:'error'},
+            petObject:{nombre:'error'},
             error: true,
             messaje : "pet doesn't exist"
         })
     }
 })
-
-router.delete('/:id', async (req, res) => {
-    const id = req.params.id
-
-    try {
-        const petDB = await Pet.findByIdAndDelete({_id: id})
-        if (petDB) {
-            res.json({
-                status: true,
-                messaje: 'Pet Has been deleted'
-            })
-        } else {
-            res.json({
-                status: false,
-                messaje: 'Error Pet has been not deleted'
-            })
-        }
-    } catch (error) {
-        console.log('error', error)
-    }
-})
-
-
 
 
 module.exports = router;
