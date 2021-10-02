@@ -33,7 +33,7 @@ router.post('/', async (req,res) => {
 router.get('/:id', async (req, res) => {
     const id = req.params.id
     try {
-        petDocument =  await Pet.findById(id)
+        const petDocument =  await Pet.findById(id)
         res.render('details', {
             petObject: petDocument,
             error: false
